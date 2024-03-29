@@ -1,0 +1,5 @@
+.idea
+*.pyc
+/Research_Data_Analysis/real_estate_data.csv
+/Research_Data_Analysis/tmp.txt
+/Research_Data_Analysis/visits.csv
