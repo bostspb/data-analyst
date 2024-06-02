@@ -1,5 +1,5 @@
 # Библиотека plotly
-Plotly — библиотека самостоятельная<br>
+Plotly — самостоятельная библиотека для построения интерактивных графиков<br>
 Документация - https://plotly.com/python/#fundamentals
 
 ## Интерактивные графики
@@ -8,7 +8,7 @@ Plotly — библиотека самостоятельная<br>
 - когда для работы с графиком нужна возможность детализации отдельных его частей;
 - когда на одном графике нужно разместить большое количество информации — её можно спрятать во всплывающих элементах.
 
-## Линейный график - line()
+## Линейный график - express.line()
 ```python
 import plotly.express as px
 data = px.data.election()
@@ -19,7 +19,7 @@ fig.show()
 ![px_line.png](px_line.png)
 
 
-## Столбчатая диаграмма - bar()
+## Столбчатая диаграмма - express.bar()
 ```python
 import plotly.express as px
 data = px.data.election()
@@ -30,4 +30,33 @@ fig.show()
 ![px_bar.png](px_bar.png)
 
 
-## Круговая диаграмма graph_objects 
+## Круговая диаграмма graph_objects.Pie() 
+```python
+from plotly import graph_objects as go
+
+name_rest = ['Филиал 1', 'Филиал 2', 'Филиал 3', 'Филиал 4', 'Основной ресторан']
+values = [18538, 12098, 8353, 15043, 23450]
+
+fig = go.Figure(data=[go.Pie(labels=name_rest, values=values)])
+fig.show() 
+```
+![go_pie.png](go_pie.png)
+
+# График воронки graph_objects.Funnel()
+```python
+from plotly import graph_objects as go
+
+fig = go.Figure(
+    go.Funnel(
+        y=[
+            'Посетителей',
+            'Добавили товар в корзину',
+            'Начали оформлять заказ',
+            'Оплатили',
+        ],
+        x=[583, 258, 120, 56],
+    )
+)
+fig.show() 
+```
+![go_funnel.png](go_funnel.png)
