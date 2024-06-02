@@ -13,7 +13,10 @@
     [query](Research_Data_Analysis/query.py), [scatter_matrix](Research_Data_Analysis/scatter_matrix.md), 
     [set_index](Research_Data_Analysis/set_index.py)
 - [Как рассказать историю с помощью данных](Storytelling_With_Data/readme.md)
-    - Библиотеки визуализации - [seaborn](seaborn.md), [plotly](plotly.md), [folium](folium.md)
     - Кому аналитик рассказывает истории
     - Что и зачем рассказывать
+    - Библиотеки визуализации - 
+      [seaborn](Storytelling_With_Data/seaborn.md), 
+      [plotly](Storytelling_With_Data/plotly.md), 
+      [folium](Storytelling_With_Data/folium.md)
     - Подготовка презентации
